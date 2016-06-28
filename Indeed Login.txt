@@ -1,0 +1,40 @@
+package signin;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class login
+{
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		// open browser
+		WebDriver d=new FirefoxDriver();
+		
+		// open url
+		Thread.sleep(6000);
+		d.get("http://www.indeed.com/");
+		
+		// select sign in
+		Thread.sleep(6000);
+		d.findElement(By.id("userOptionsLabel")).click();
+		
+		// enter email id
+		Thread.sleep(6000);
+		d.findElement(By.id("signin_email")).sendKeys("ranarreddy@gmail.com");
+		
+		// enter password
+		Thread.sleep(6000);
+		d.findElement(By.id("signin_password")).sendKeys("Ranarreddy1");
+		
+		// click on sign in
+		Thread.sleep(6000);
+		d.findElement(By.xpath(".//*[@id='loginform']/button")).click();
+
+	}
+
+}
+
+
+-----------------------------------------------------------------------------------------------

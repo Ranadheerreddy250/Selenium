@@ -1,0 +1,36 @@
+package Face;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class book 
+{
+
+	private static WebDriver d;
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		// open browser
+		WebDriver d=new FirefoxDriver();
+
+		
+		// open url
+		Thread.sleep(6000);
+		d.get("https://www.facebook.com/");
+
+		// enter email or phone
+		Thread.sleep(5000);
+		d.findElement(By.id("email")).sendKeys("ranadheerreddy.grr@gmail.com");
+
+		// enter password
+		Thread.sleep(3000);
+		d.findElement(By.id("pass")).sendKeys("RaNaDHeeR1");
+
+		// click on log in
+		Thread.sleep(2000);
+		d.findElement(By.id("u_0_o")).click();
+
+	}
+
+}
