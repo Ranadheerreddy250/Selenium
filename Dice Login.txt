@@ -1,0 +1,38 @@
+package Login;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Test 
+{
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		// open browser
+		WebDriver d=new FirefoxDriver();
+		
+		// open url
+		Thread.sleep(1000);
+		d.get("http://www.dice.com/");
+		
+		// click on login
+		Thread.sleep(500);
+		d.findElement(By.id("Login_1")).click();
+		
+		// enter email
+		Thread.sleep(5000);
+		d.findElement(By.id("Login_1")).sendKeys("ranarreddy@gmail.com");
+		
+		// enter password
+		Thread.sleep(2000);
+		d.findElement(By.id("Password_1")).sendKeys("Ranarreddy1");
+		
+		// click on login
+		Thread.sleep(3000);
+		d.findElement(By.id("LoginBtn_1")).click();
+		
+
+	}
+
+}

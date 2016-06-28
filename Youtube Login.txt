@@ -1,0 +1,42 @@
+package signin;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class enter 
+{
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		// open browser
+		WebDriver d=new FirefoxDriver();
+		
+		// open url
+		Thread.sleep(6000);
+		d.get("https://www.youtube.com/");
+		
+		// click on sign in
+		Thread.sleep(6000);
+		d.findElement(By.id("yt-uix-button yt-uix-button-size-default yt-uix-button-primary")).click();
+
+		// enter email
+		Thread.sleep(6000);
+		d.findElement(By.id("Email")).sendKeys("ranadheerreddy.grr@gmail.com");
+		
+		// click on next
+		Thread.sleep(6000);
+		d.findElement(By.id("next")).click();
+		
+		// enter pswd
+		Thread.sleep(6000);
+		d.findElement(By.id("Passwd")).sendKeys("Gsujith250");
+		
+		//click sign in
+		Thread.sleep(6000);
+		d.findElement(By.id("signIn")).click();
+		
+		
+	}
+
+}
